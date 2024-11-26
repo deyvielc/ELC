@@ -154,7 +154,9 @@
   <!-- Clients Section -->
 <section id="clients" class="clients section">
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="swiper init-swiper" style="max-height: 500px; margin-bottom: 40px; overflow: hidden; visibility: hidden; height: 0; transition: height 0.3s, visibility 0.3s;">
+    
+    <!-- Contenedor aislado para Swiper -->
+    <div class="swiper-container" style="max-height: 500px; overflow: hidden;">
       <script type="application/json" class="swiper-config">
         {
           "loop": true,
@@ -185,8 +187,7 @@
               "slidesPerView": 6,
               "spaceBetween": 120
             }
-          },
-          "lazy": true
+          }
         }
       </script>
       <div class="swiper-wrapper align-items-center">
@@ -201,32 +202,10 @@
       </div>
       <div class="swiper-pagination"></div>
     </div>
+
   </div>
 </section><!-- /Clients Section -->
 
-<script>
-  window.addEventListener("load", function() {
-    // Inicializar Swiper solo después de que la página se haya cargado completamente
-    var swiper = new Swiper('.swiper', {
-      loop: true,
-      speed: 600,
-      autoplay: {
-        delay: 5000
-      },
-      slidesPerView: "auto",
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true
-      },
-      lazy: true
-    });
-
-    // Después de la inicialización, hacer visible el Swiper
-    document.querySelector('.swiper').style.visibility = 'visible';
-    document.querySelector('.swiper').style.height = 'auto';
-  });
-</script>
 
     <!-- Features Section -->
     <section id="features" class="features section">
