@@ -808,6 +808,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Para evitar desbordes y mantener todo contenido dentro del contenedor */
 }
 
 .hero img {
@@ -816,7 +817,8 @@ section,
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Asegura que la imagen cubra el área completamente */
+  object-position: center; /* Centra la imagen */
   z-index: 1;
 }
 
@@ -850,12 +852,12 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/* Añadido para hacer la imagen de fondo más adaptable */
 @media (max-width: 768px) {
   .hero img {
-    object-fit: cover;
     width: 100%;
-    height: auto; /* Se ajusta automáticamente en dispositivos móviles */
+    height: 100%; /* Asegura que la imagen mantenga su altura de acuerdo con el contenedor */
+    object-fit: cover; /* Ajusta la imagen para que cubra el área */
+    object-position: center; /* Centra la imagen */
   }
 
   .hero h2 {
