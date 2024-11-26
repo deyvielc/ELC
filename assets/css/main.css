@@ -850,6 +850,23 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Añadido para hacer la imagen de fondo más adaptable */
+@media (max-width: 768px) {
+  .hero img {
+    object-fit: cover;
+    width: 100%;
+    height: auto; /* Se ajusta automáticamente en dispositivos móviles */
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+}
+
 .hero .icon-box {
   padding: 30px 20px;
   transition: ease-in-out 0.3s;
@@ -890,15 +907,6 @@ section,
   color: var(--accent-color);
 }
 
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-}
 
 /*--------------------------------------------------------------
 # About Section
